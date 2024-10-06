@@ -16,7 +16,7 @@ local function set_highlights()
 		return {
 			fg = fg,
 			bg = (config.options.extend_background_behind_borders and not styles.transparency) and palette.surface
-				or "NONE",
+					or "NONE",
 		}
 	end
 
@@ -320,7 +320,7 @@ local function set_highlights()
 		["@function.method"] = { fg = palette.rose },
 		["@function.method.call"] = { fg = palette.iris },
 
-		["@constructor"] = { fg = palette.foam },
+		["@constructor"] = { fg = palette.rose },
 		["@operator"] = { link = "Operator" },
 
 		--- Keywords
@@ -422,6 +422,7 @@ local function set_highlights()
 		["@lsp.type.namespace.python"] = { link = "@variable" },
 		["@lsp.type.parameter"] = { link = "@parameter" },
 		["@lsp.type.property"] = { link = "@property" },
+		["@lsp.type.constructor"] = { link = "@constructor" },
 		["@lsp.type.variable"] = {}, -- defer to treesitter for regular variables
 		["@lsp.type.variable.svelte"] = { link = "@variable" },
 		["@lsp.typemod.function.defaultLibrary"] = { link = "@function.builtin" },
@@ -1077,19 +1078,19 @@ local function set_highlights()
 	if config.options.enable.terminal then
 		vim.g.terminal_color_0 = palette.overlay -- black
 		vim.g.terminal_color_8 = palette.subtle -- bright black
-		vim.g.terminal_color_1 = palette.love -- red
-		vim.g.terminal_color_9 = palette.love -- bright red
-		vim.g.terminal_color_2 = palette.pine -- green
+		vim.g.terminal_color_1 = palette.love  -- red
+		vim.g.terminal_color_9 = palette.love  -- bright red
+		vim.g.terminal_color_2 = palette.pine  -- green
 		vim.g.terminal_color_10 = palette.pine -- bright green
-		vim.g.terminal_color_3 = palette.gold -- yellow
+		vim.g.terminal_color_3 = palette.gold  -- yellow
 		vim.g.terminal_color_11 = palette.gold -- bright yellow
-		vim.g.terminal_color_4 = palette.foam -- blue
+		vim.g.terminal_color_4 = palette.foam  -- blue
 		vim.g.terminal_color_12 = palette.foam -- bright blue
-		vim.g.terminal_color_5 = palette.iris -- magenta
+		vim.g.terminal_color_5 = palette.iris  -- magenta
 		vim.g.terminal_color_13 = palette.iris -- bright magenta
-		vim.g.terminal_color_6 = palette.rose -- cyan
+		vim.g.terminal_color_6 = palette.rose  -- cyan
 		vim.g.terminal_color_14 = palette.rose -- bright cyan
-		vim.g.terminal_color_7 = palette.text -- white
+		vim.g.terminal_color_7 = palette.text  -- white
 		vim.g.terminal_color_15 = palette.text -- bright white
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim
