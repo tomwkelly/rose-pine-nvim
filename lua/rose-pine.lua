@@ -33,7 +33,7 @@ local function set_highlights()
 		["@method"] = { fg = palette.rose },
 		["@namespace"] = { link = "Include" },
 		["@number"] = { link = "Number" },
-		["@parameter"] = { fg = palette.iris, italic = styles.italic },
+		["@parameter"] = { fg = palette.rose, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
 		["@punctuation"] = { fg = palette.subtle },
 		["@punctuation.bracket"] = { link = "@punctuation" },
